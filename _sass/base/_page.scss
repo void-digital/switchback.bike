@@ -1,0 +1,78 @@
+// Global styling for this template
+body {
+  overflow-x: hidden;
+  @include body-font;
+  padding-top: 222px;
+  position: relative;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #000;
+  &:hover {
+    color: darken(#000, 10%);
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  @include heading-font;
+}
+
+.page-section {
+  padding: 170px 0;
+
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 75px;
+    text-transform: none;
+    @include heading-font;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+.bg-black {
+  background-color: #000;
+  color: #fff;
+}
+
+ul {
+  padding-inline-start: 20px;
+}

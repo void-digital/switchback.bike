@@ -1,0 +1,60 @@
+<!-- Navigation -->
+<nav class="fixed-top" id="nav">
+  <div class="container my-2">
+    <div class="row align-items-center">
+      <div class="col-4 offset-4 text-center">
+        <a href="tel:0490256282" class="lead">Phone: 0490 256 282</a>
+      </div>
+      <div class="col-4 text-center">
+        <ul class="list-inline social-buttons">
+          {% for link in site.data.sitetext[site.locale].social %}
+          <li class="list-inline-item">
+            {% if link.url %}
+            <a href="{{ link.url }}" target="_blank">
+              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <a class="navbar-brand js-scroll-trigger" href="#home">
+          {%- if site.logo -%}
+          <img src="{{ site.logo.path }}" />
+          {%- else -%} {{ site.title }} {%- endif -%}
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="navbar-nav text-uppercase">
+          {% for link in site.data.navigation[site.locale].nav %}
+          <li class="nav-item">
+            {%- if link.url -%}
+            <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
+              >{{ link.title }}</a
+            >
+            {%- else if link.section -%}
+            <a class="nav-link js-scroll-trigger" href="#{{ link.section }}"
+              >{{ link.title }}</a
+            >
+            {%- else -%}
+            <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {%- endif -%}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->
+
+<!-- Header -->
+<header class="masthead">
+  <img src="{{ site.data.style.header-image }}" alt="Workshop" />
+</header>
+<!-- End Header -->
