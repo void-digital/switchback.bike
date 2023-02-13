@@ -1,11 +1,11 @@
 <!-- Navigation -->
 <nav class="fixed-top" id="nav">
-  <div class="container my-2">
+  <div class="container-fluid mt-2">
     <div class="row align-items-center">
-      <div class="col-4 offset-4 text-center">
+      <div class="col-sm-6 offset-sm-3 col-lg-8 offset-lg-2 text-center">
         <a href="tel:0490256282" class="lead">Phone: 0490 256 282</a>
       </div>
-      <div class="col-4 text-center">
+      <div class="d-none d-sm-block col-sm-3 col-lg-2 text-center">
         <ul class="list-inline social-buttons">
           {% for link in site.data.sitetext[site.locale].social %}
           <li class="list-inline-item">
@@ -19,7 +19,7 @@
         </ul>
       </div>
     </div>
-    <div class="row">
+    <div class="row no-gutters">
       <div class="col text-center">
         <a class="navbar-brand js-scroll-trigger" href="#home">
           {%- if site.logo -%}
@@ -28,8 +28,8 @@
         </a>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
+    <div class="row no-gutters">
+      <div class="col d-none d-md-block">
         <ul class="navbar-nav text-uppercase">
           {% for link in site.data.navigation[site.locale].nav %}
           <li class="nav-item">
@@ -43,6 +43,54 @@
             >
             {%- else -%}
             <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {%- endif -%}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col d-block d-md-none text-center">
+        <button
+          class="btn btn-white text-uppercase mt-3"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseMenu"
+          aria-controls="collapseMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img
+            width="30"
+            src="{{ site.data.style.menu-toggler }}"
+            alt="Menu Toggler"
+          />
+        </button>
+        <ul class="text-uppercase collapse" id="collapseMenu">
+          {% for link in site.data.navigation[site.locale].nav %}
+          <li class="nav-item">
+            {%- if link.url -%}
+            <a
+              class="nav-link js-scroll-trigger"
+              href="{{ link.url }}"
+              data-toggle="collapse"
+              data-target="#collapseMenu"
+              >{{ link.title }}</a
+            >
+            {%- else if link.section -%}
+            <a
+              class="nav-link js-scroll-trigger"
+              href="#{{ link.section }}"
+              data-toggle="collapse"
+              data-target="#collapseMenu"
+              >{{ link.title }}</a
+            >
+            {%- else -%}
+            <a
+              class="nav-link js-scroll-trigger"
+              href="#"
+              data-toggle="collapse"
+              data-target="#collapseMenu"
+              >{{ link.title }}</a
+            >
             {%- endif -%}
           </li>
           {% endfor %}

@@ -4,6 +4,7 @@ white: "#FFF"
 black: "#000"
 
 #Image Customization
+menu-toggler: "assets/img/menu.svg"
 header-image: "assets/img/workshop.webp"
 services-images:
   - assets/img/services-1.webp
