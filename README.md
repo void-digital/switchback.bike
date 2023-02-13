@@ -1,6 +1,6 @@
-# The VOID Digital Website
+# The Switchback Bicycle Repair Website
 
-This repository generates what goes on the <https://void.digital> website.
+This repository generates what goes on the <https://www.switchback.bike> website.
 
 ## Contributions
 
