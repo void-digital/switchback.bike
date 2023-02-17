@@ -11,7 +11,8 @@
           </li>
           <li>
             Small repairs can be done on the spot. A minimum labour charge of
-            $79 does apply to small mobile repairs.
+            {{site.data.sitetext[site.locale].services.on_the_spot_repairs.price}}
+            does apply to small mobile repairs.
           </li>
           <li>
             Family/group discounts are available for three or more bikes from
@@ -31,7 +32,11 @@
           <div class="card-body">
             <h5 class="card-title">
               <span>General Service</span>
-              <span class="float-right">$109</span>
+              <span class="float-right">
+                {{
+                site.data.sitetext[site.locale].services.general_service.price
+                }}
+              </span>
               <hr />
             </h5>
             <div class="card-text">
@@ -58,7 +63,10 @@
           <div class="card-body">
             <h5 class="card-title">
               <span>Full Service</span>
-              <span class="float-right">$169</span>
+              <span class="float-right">
+                {{ site.data.sitetext[site.locale].services.full_service.price
+                }}
+              </span>
               <hr />
             </h5>
             <div class="card-text">
@@ -87,7 +95,11 @@
           <div class="card-body">
             <h5 class="card-title">
               <span>Overhaul Service</span>
-              <span class="float-right">$259</span>
+              <span class="float-right">
+                {{
+                site.data.sitetext[site.locale].services.overhaul_service.price
+                }}
+              </span>
               <hr />
             </h5>
             <div class="card-text">
@@ -119,7 +131,11 @@
           <div class="card-body">
             <h5 class="card-title">
               <span>Kids Bike Service</span>
-              <span class="float-right">$79</span>
+              <span class="float-right">
+                {{
+                site.data.sitetext[site.locale].services.kids_bike_service.price
+                }}
+              </span>
               <hr />
             </h5>
             <div class="card-text">
@@ -145,8 +161,22 @@
             <div class="card-title">
               <h5>Assemble Boxed Bike</h5>
               <div class="row no-gutters">
-                <div class="col"><small>Kids from</small> <b>$79</b></div>
-                <div class="col"><small>Adults from</small> <b>$109</b></div>
+                <div class="col">
+                  <small>Kids from</small>
+                  <b
+                    >{{
+                    site.data.sitetext[site.locale].services.assemble_boxed_bike.price.kids
+                    }}</b
+                  >
+                </div>
+                <div class="col">
+                  <small>Adults from</small>
+                  <b
+                    >{{
+                    site.data.sitetext[site.locale].services.assemble_boxed_bike.price.adults
+                    }}</b
+                  >
+                </div>
               </div>
               <hr />
             </div>
@@ -178,13 +208,19 @@
                   <h5>On the Spot Repairs</h5>
                 </div>
                 <div class="col text-right">
-                  <b>$79</b> <small>+ parts</small>
+                  <b
+                    >{{
+                    site.data.sitetext[site.locale].services.on_the_spot_repairs.price
+                    }}</b
+                  >
+                  <small>+ parts</small>
                 </div>
               </div>
               <hr />
             </div>
             <div class="card-text">
-              Minor mobile repairs have a minimum labour charge of $79.<br />Examples
+              Minor mobile repairs have a minimum labour charge of
+              {{site.data.sitetext[site.locale].services.on_the_spot_repairs.price}}.<br />Examples
               of minor repairs include:
               <ul>
                 <li>Bike tyre or tube replacement</li>

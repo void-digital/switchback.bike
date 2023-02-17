@@ -1,11 +1,27 @@
 # English (default)
 # -----------------
 en: &DEFAULT_EN
+  services:
+    general_service:
+      price: "$109"
+    full_service:
+      price: "$169"
+    overhaul_service:
+      price: "$259"
+    kids_bike_service:
+      price: "$79"
+    assemble_boxed_bike:
+      price:
+        kids: "$79"
+        adults: "$109"
+    on_the_spot_repairs:
+      price: "$79"
   social:
     - url: https://www.facebook.com/switchbackbicyclerepair
       icon: "fab fa-facebook"
     - url: https://www.instagram.com/switchbackbicyclerepair
       icon: "fab fa-instagram"
+
 en-US:
   <<: *DEFAULT_EN
 en-CA:
