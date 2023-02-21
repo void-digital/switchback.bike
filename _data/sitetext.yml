@@ -4,7 +4,7 @@ en: &DEFAULT_EN
   services:
     # General Service
     general_service:
-      price: "$109"
+      price: "$130"
     # Full Service
     full_service:
       price: "$169"
